@@ -1,0 +1,11 @@
+---
+title: "Income and life expectancy in West Africa"
+format:
+  html:
+    theme: default
+---
+
+```{r}
+reticulate::py_config()
+```
+
