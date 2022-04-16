@@ -1,11 +1,33 @@
 ---
 title: "Income and life expectancy in West Africa"
+author: "Eric Anku"
 format:
   html:
     theme: default
+editor: visual
 ---
 
-```{r}
-reticulate::py_config()
+```{python}
+#| echo: false
+# Load libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 ```
 
+```{python}
+# Import dataset
+df = pd.read_csv("gapminder.csv", low_memory = False)
+```
+
+```{python}
+print("Number of observations")
+print(len(df)) #Number of observations
+
+print("Number of variables")
+print(len(df.columns)) #Number of variables
+```
+
+```{python}
+df.info()
+```
